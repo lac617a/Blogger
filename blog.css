@@ -1,0 +1,126 @@
+body{
+	box-sizing: border-box;
+	margin: 0;
+	background-color: honeydew;
+}
+.body{
+	display: grid;
+	grid-template-columns: repeat(8, 1fr);
+	grid-template-rows: repeat(auto, 1fr);
+}
+
+.header{
+	position: relative;
+	grid-column: 1/-1;
+}
+
+.header > img{
+	height: 300px;
+	width: 100%;
+	background-color: #333;
+	box-shadow: 0 0 2px rgba(0, 0, 0, .7), inset 15px 15px 20px rgba(255, 255, 255, .3);
+}
+
+.nav{
+	position: absolute;
+	background-color: rgba(0, 0, 0, .7);
+	top: 267px;
+	width: 100%;
+}
+
+.nav > ul{
+	justify-content: center;
+	display: flex;
+	font-size: 24px;
+	list-style: none;
+	margin: 0;
+}
+
+.nav > ul li{
+	padding: 3px;
+	margin: 0 10px 0 0;
+}
+
+.nav > ul li a{
+	color: #fff;
+	text-decoration: none;
+}
+
+.nav > ul li a:hover{
+	color: #E6584C;
+	text-decoration: underline;
+}
+
+.section{
+	background-color: #415965;
+	text-align: center;
+	height: 200px;
+	grid-row: 2;
+	grid-column: 2/-3;
+}
+
+.aside{
+	background-color: #E6584C;
+	text-align: center;
+	grid-row: 2;
+	grid-column: -3/-1;
+}
+
+/* Estilos generales */
+nav ul{
+	list-style: none;
+	padding: 0;
+	font-size: 25px;
+}
+
+nav li{
+	line-height: 3rem;
+	position: relative;
+}
+
+nav li ul{
+	position: absolute;
+}
+
+nav a{
+	color: #ddd;
+	display: block;
+	padding: 0 2.5em;
+	text-decoration: none;
+	transition: .4s all ease-in-out;
+}
+
+nav a:hover{
+	background: rgba(0, 0, 0, .5);
+}
+
+nav li ul {
+	display: none;
+}
+
+nav li:hover > ul{
+	display: block;
+}
+
+/* Primer nivel */
+nav > ul {
+	background-color: #333;
+	display: table;
+	width: 100%;
+}
+
+nav > ul > li{
+	float: left;
+}
+
+/* Segundo nivel */
+
+nav li li {
+	background: #222;
+	width: 250px;
+
+}
+
+nav > ul > li > ul{
+	top: 100%;
+}
